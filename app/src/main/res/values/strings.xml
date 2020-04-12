@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">travelog01</string>
+    <string name="title_Story">Story</string>
+    <string name="title_Report">Report</string>
+    <string name="title_Write">Write</string>
+    <string name="title_Map">Map</string>
+    <string name="title_Settings">Settings</string>
+</resources>

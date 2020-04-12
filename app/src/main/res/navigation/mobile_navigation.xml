@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_Story">
+
+    <fragment
+        android:id="@+id/navigation_Story"
+        android:name="com.example.travelog01.ui.story.StoryFragment"
+        android:label="@string/title_Story"
+        tools:layout="@layout/story_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_Report"
+        android:name="com.example.travelog01.ui.report.ReportFragment"
+        android:label="@string/title_Report"
+        tools:layout="@layout/report_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_Write"
+        android:name="com.example.travelog01.ui.write.writeFragment"
+        android:label="@string/title_Write"
+        tools:layout="@layout/write_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_Map"
+        android:name="com.example.travelog01.ui.map.MapFragment"
+        android:label="@string/title_Map"
+        tools:layout="@layout/map_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_Settings"
+        android:name="com.example.travelog01.ui.settings.SettingsFragment"
+        android:label="@string/title_Settings"
+        tools:layout="@layout/settings_fragment" />
+
+</navigation>
