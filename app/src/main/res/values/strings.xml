@@ -5,4 +5,9 @@
     <string name="title_Write">Write</string>
     <string name="title_Map">Map</string>
     <string name="title_Settings">Settings</string>
+    <string name="setting_mood">Add Mood</string>
+    <string name="setting_activity">Add Activity</string>
+    <string name="setting_rate">Rate us</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="setting_about">About</string>
 </resources>
