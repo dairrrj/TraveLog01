@@ -5,6 +5,18 @@
     <string name="title_Write">Write</string>
     <string name="title_Map">Map</string>
     <string name="title_Settings">Settings</string>
+
+    <string name="input_title">Please input title…</string>
+    <string name="input_text">Any idea about trip?</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="title">Please select time</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="select_date">Select emotion</string>
+    <string name="current_date">Emotion</string>
+    <string name="select_time">Select time</string>
+    <string name="current_time">Time</string>
     <string name="setting_mood">Add Mood</string>
     <string name="setting_activity">Add Activity</string>
     <string name="setting_rate">Rate us</string>
