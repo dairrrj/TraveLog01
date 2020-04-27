@@ -12,17 +12,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.travelog01.Database.DatabaseHelper;
 import com.example.travelog01.datepicker.CustomDatePicker;
 import com.example.travelog01.datepicker.DateFormatUtils;
-
-import butterknife.Unbinder;
 
 
 public class write_activity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView mTvSelectedDate, mTvSelectedTime;
-    private CustomDatePicker mDatePicker, mTimerPicker;
-    public LinearLayout lDate;
+    private TextView mTvSelectedTime;
+    private CustomDatePicker mTimerPicker;
     public LinearLayout lTime;
     public ImageView lWeather;
     public LinearLayout addLlWeather;
@@ -31,8 +29,10 @@ public class write_activity extends AppCompatActivity implements View.OnClickLis
     EditText input_title, input_text;
     DatabaseHelper diaryDb;
     String weather;
+
     String image;
     Unbinder unbinder;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +45,9 @@ public class write_activity extends AppCompatActivity implements View.OnClickLis
         diaryDb = new DatabaseHelper(this);
 
         initView();
-
-        //ButterKnife.bind(this);
     }
+
+
 
     private void initView() {
         lDate =  findViewById(R.id.ll_date);
@@ -122,6 +122,7 @@ public class write_activity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+
     private void initDatePicker() {
         long beginTimestamp = DateFormatUtils.str2Long("2009-05-01", false);
         long endTimestamp = System.currentTimeMillis();
@@ -144,6 +145,7 @@ public class write_activity extends AppCompatActivity implements View.OnClickLis
         // 不允许滚动动画
         mDatePicker.setCanShowAnim(false);
     }
+
 
     private void initTimerPicker() {
         String beginTime = "2000-01-01 00:00";
@@ -183,6 +185,7 @@ public class write_activity extends AppCompatActivity implements View.OnClickLis
                         Toast.LENGTH_LONG).show();
                 boolean isInserted = diaryDb.insertData(mTvSelectedTime.getText().toString(),
                         input_title.getText().toString(), input_text.getText().toString(), weather);
+
                 this.finish();
                 return true;
 

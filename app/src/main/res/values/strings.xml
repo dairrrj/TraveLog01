@@ -17,6 +17,8 @@
     <string name="current_date">Emotion</string>
     <string name="select_time">Select time</string>
     <string name="current_time">Time</string>
+    <string name="font_medium">medium</string>
+    <string name="font_regular">regular</string>
     <string name="setting_mood">Add Mood</string>
     <string name="setting_activity">Add Activity</string>
     <string name="setting_rate">Rate us</string>
