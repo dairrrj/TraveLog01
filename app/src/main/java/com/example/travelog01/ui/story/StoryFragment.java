@@ -26,6 +26,7 @@ import com.example.travelog01.Adapter.DiaryAdapter;
 import com.example.travelog01.Database.DatabaseHelper;
 import com.example.travelog01.DetailActivity;
 import com.example.travelog01.Model.DiaryBean;
+
 import com.example.travelog01.R;
 import com.example.travelog01.write_activity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
