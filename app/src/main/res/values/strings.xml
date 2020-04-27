@@ -5,4 +5,9 @@
     <string name="title_Write">Write</string>
     <string name="title_Map">Map</string>
     <string name="title_Settings">Settings</string>
+    <string name="time">时间:</string>
+    <string name="timeExample">2020/04/24</string>
+    <string name="place">地点:</string>
+    <string name="placeExample">北京</string>
+
 </resources>
