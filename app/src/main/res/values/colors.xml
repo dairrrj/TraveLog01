@@ -24,4 +24,8 @@
     <color name="divider">#dfdcd5</color>
     <color name="thrid_text">#4CAF50</color>
     <color name="thrid_text2">#4CAF50</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#00CCFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>
