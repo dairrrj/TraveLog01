@@ -34,7 +34,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StoryFragment extends Fragment implements DiaryAdapter.OnItemClickListener {
+public class StoryFragment extends Fragment implements DiaryAdapter.OnRvItemClickListener {
 
     private StoryViewModel mViewModel;
     private SearchView searchView = null;
@@ -80,7 +80,7 @@ public class StoryFragment extends Fragment implements DiaryAdapter.OnItemClickL
         });
 
         mDiaryAdapter=new DiaryAdapter(mList,getActivity());
-        //mDiaryAdapter.setmOnItemClickListener(this);
+        mDiaryAdapter.setOnRvItemClickListener(this);
         mRecyclerView.setAdapter(mDiaryAdapter);
         diaryDb = new DatabaseHelper(getActivity());
     }
@@ -98,6 +98,18 @@ public class StoryFragment extends Fragment implements DiaryAdapter.OnItemClickL
             mList.addAll(list);
         }
         mDiaryAdapter.notifyDataSetChanged();
+    }
+    @Override
+    public void OnItemClick(int position) {
+        Intent intent = new Intent(getContext(), DetailActivity.class);
+        intent.putExtra("title", mList.get(position).getTitle());
+        intent.putExtra("content", mList.get(position).getContent());
+        //intent.putExtra("image", datas.get(position).getImage());
+        intent.putExtra("date", mList.get(position).getDate());
+        //intent.putExtra("week", datas.get(position).getWeek());
+        //intent.putExtra("weather", datas.get(position).getWeather());
+        intent.putExtra("id", mList.get(position).getId());
+        startActivity(intent);
     }
 
     @Override
@@ -150,10 +162,10 @@ public class StoryFragment extends Fragment implements DiaryAdapter.OnItemClickL
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onItemClick(DiaryBean diary) {
+    //@Override
+    //public void onItemClick(DiaryBean diary) {
 
-    }
+    //}
 }
 
 

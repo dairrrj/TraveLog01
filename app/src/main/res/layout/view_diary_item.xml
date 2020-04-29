@@ -28,7 +28,7 @@
             android:paddingLeft="4dp"
             android:paddingTop="5dp"
             android:text="2020年04月18日"
-            android:textColor="@color/thrid_text2"
+            android:textColor="@color/date_picker_text_light"
             android:textSize="14sp"
             />
     </LinearLayout>

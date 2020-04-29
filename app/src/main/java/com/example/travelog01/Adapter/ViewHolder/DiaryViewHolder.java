@@ -9,15 +9,16 @@ import com.example.travelog01.Adapter.DiaryAdapter;
 import com.example.travelog01.Model.DiaryBean;
 import com.example.travelog01.R;
 
-public class DiaryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-//public class DiaryViewHolder extends RecyclerView.ViewHolder{
+//public class DiaryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class DiaryViewHolder extends RecyclerView.ViewHolder{
     private TextView mTitle, mContent, mLocDate;
-    private DiaryAdapter.OnItemClickListener mOnItemClickListener;
+    //private DiaryAdapter.OnItemClickListener mOnItemClickListener;
     private DiaryBean mDiary;
 
-    public DiaryViewHolder(View itemView, DiaryAdapter.OnItemClickListener onItemClickListener) {
+    //public DiaryViewHolder(View itemView, DiaryAdapter.OnItemClickListener onItemClickListener) {
+    public DiaryViewHolder(View itemView){
         super(itemView);
-        mOnItemClickListener = onItemClickListener;
+        //mOnItemClickListener = onItemClickListener;
         mTitle = (TextView) itemView.findViewById(R.id.diary_item_tv_title);
         mContent = (TextView) itemView.findViewById(R.id.diary_item_tv_content);
         mLocDate = (TextView) itemView.findViewById(R.id.diary_item_tv_date);
@@ -31,8 +32,8 @@ public class DiaryViewHolder extends RecyclerView.ViewHolder implements View.OnC
         mContent.setText((diary.getContent().length() < 75) ? diary.getContent():diary.getContent().substring(0,74) + "...");
     }
 
-    @Override
-    public void onClick(View view) {
-        mOnItemClickListener.onItemClick(mDiary);
-    }
+    //@Override
+    //public void onClick(View view) {
+    //    mOnItemClickListener.onItemClick(mDiary);
+    //}
 }
